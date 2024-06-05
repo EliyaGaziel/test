@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Card Game! alpha version 1.4</h1>
+
+        <div class="card-select-container">
+            <select id="card-select">
+                <!-- Options will be added dynamically -->
+            </select>
+            <select id="action-select">
+                <option value="buy">Buy</option>
+                <option value="sell">Sell</option>
+            </select>
+        </div>
+
+        <div class="card-info-container">
+            <img id="card-image" src="" alt="Card Image">
+            <div id="card-display">
+                <!-- Card information will be dynamically added here -->
+            </div>
+            <div>
+                <p id="selected-item-info">Selected Card:</p>
+                <p id="selected-item-name"></p>
+                <p id="selected-item-price"></p>
+            </div>
+        </div>
+
+        <div class="transaction-container">
+            <button id="perform-transaction">Perform Transaction</button>
+            <button id="refresh-market">Refresh Market</button>
+            <button id="buy-all-button">Buy All</button>
+            
+        <div class="quantity-container">
+            <input type="number" id="card-quantity-input" min="1" value="1">
+            <button id="buy-quantity-button">Buy Quantity</button>
+        </div>
+        </div>
+
+        <div class="balance-container">
+            <h2>Balance</h2>
+            <p id="balance-amount">100</p>
+        </div>
+        
+        <div class="inventory-container">
+            <h2>Inventory</h2>
+            <button id="sell-all-button">Sell All</button>
+            <button id="sell-all-rares-button">Sell All Rares</button>
+            <button id="sell-all-super-rares-button">Sell All Super Rares</button>
+            <button id="sell-all-epics-button">Sell All Epics</button>
+            <button id="sell-all-mythics-button">Sell All Mythics</button>
+            <!-- Inventory list -->
+            <ul id="inventory-list">
+                <!-- Inventory items will be dynamically added here -->
+            </ul>
+        </div>
+
+        <div id="notification" class="notification">Market Refreshed!</div>
+        
+        <div id="pack-opening-container">
+            <div id="shop">
+                <button class="pack-btn" data-pack="rare">Rare Pack<span class="pack-price">50$</span></button>
+                <button class="pack-btn" data-pack="super_rare">Super Rare Pack<span class="pack-price">250$</span></button>
+                <button class="pack-btn" data-pack="epic">Epic Pack<span class="pack-price">1000$</span></button>
+                
+            </div>
+            
+            <div id="cards-container"></div>
+        </div>
+
+        <div class="achievements-container">
+            <h2>Achievements</h2>
+            <ul id="achievements-list">
+                <!-- Achievements will be dynamically added here -->
+            </ul>
+        </div>
+        
+        <div class="achievements-progress-container">
+            <h2>Achievement Progress</h2>
+            <ul id="achievements-progress-list">
+                <!-- Achievement progress will be dynamically added here -->
+            </ul>
+        </div>
+
+        <table>
+            <tr>
+                <td>Rarity</td>
+                <td>Chances of getting</td>
+                <td>min value</td>
+                <td>max value</td>
+            </tr>
+            <tr>
+                <td>Rare</td>
+                <td>50%</td>
+                <td>5$</td>
+                <td>20$</td>
+            </tr>
+            <tr>
+                <td>Super Rare</td>
+                <td>28%</td>
+                <td>25$</td>
+                <td>45$</td>
+            </tr>
+            <tr>
+                <td>Epic</td>
+                <td>15%</td>
+                <td>50$</td>
+                <td>150$</td>
+            </tr>
+            <tr>
+                <td>Mythic</td>
+                <td>5%</td>
+                <td>200$</td>
+                <td>450$</td>
+            </tr>
+            <tr>
+                <td>Legendary</td>
+                <td>2%</td>
+                <td>500$</td>
+                <td>1000$</td>
+            </tr>
+            <tr>
+                <td>Dev</td>
+                <td>0.001%</td>
+                <td>100000$</td>
+                <td>1000000$</td>
+            </tr>
+        </table>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
